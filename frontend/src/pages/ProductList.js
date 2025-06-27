@@ -19,12 +19,10 @@ function ProductList() {
     if (editingId) {
       await api.put(`/products/${editingId}`, {
         ...form,
-        change_by: 1, // Pode capturar do token
       });
     } else {
       await api.post("/products", {
         ...form,
-        create_by: 1, // Pode capturar do token
       });
     }
 

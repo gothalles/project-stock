@@ -78,7 +78,6 @@ function GoodsMovement() {
     try {
       await api.post("/goodsMovement", {
         ...headerForm,
-        create_by: 1, // depois pode pegar do token
         items,
       });
       setHeaderForm({ type: "", description: "" });

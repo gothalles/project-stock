@@ -32,7 +32,6 @@ exports.getByIdWithItems = async (req, res) => {
 // Criar Header
 exports.create = async (req, res) => {
   const { type, description, items } = req.body;
-  console.log(req.body);
 
   const [result] = await pool.query("INSERT INTO tb_gm_header (type, description, create_by, create_on) VALUES (?, ?, ?, ?)", [
     type,
